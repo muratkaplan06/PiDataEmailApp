@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiDataEmailApp.DataAccess", "PiDataEmailApp.DataAccess\PiDataEmailApp.DataAccess.csproj", "{5CFB162D-0D8A-403F-A09D-F2F23BCB8906}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PiDataEmailApp.Business", "PiDataEmailApp.Business\PiDataEmailApp.Business.csproj", "{322B91A6-C1CF-470C-A433-9E903BC96CBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiDataEmailApp.Entities", "PiDataEmailApp.Entities\PiDataEmailApp.Entities.csproj", "{E9E27F2D-2A58-421F-B1D2-D8A61DDA150A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiDataEmailApp.Api", "PiDataEmailApp.Api\PiDataEmailApp.Api.csproj", "{4519B6B4-CB3D-4379-89DF-43318BBE1A6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5CFB162D-0D8A-403F-A09D-F2F23BCB8906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CFB162D-0D8A-403F-A09D-F2F23BCB8906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CFB162D-0D8A-403F-A09D-F2F23BCB8906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFB162D-0D8A-403F-A09D-F2F23BCB8906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{322B91A6-C1CF-470C-A433-9E903BC96CBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{322B91A6-C1CF-470C-A433-9E903BC96CBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{322B91A6-C1CF-470C-A433-9E903BC96CBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{322B91A6-C1CF-470C-A433-9E903BC96CBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9E27F2D-2A58-421F-B1D2-D8A61DDA150A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9E27F2D-2A58-421F-B1D2-D8A61DDA150A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9E27F2D-2A58-421F-B1D2-D8A61DDA150A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9E27F2D-2A58-421F-B1D2-D8A61DDA150A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4519B6B4-CB3D-4379-89DF-43318BBE1A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4519B6B4-CB3D-4379-89DF-43318BBE1A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4519B6B4-CB3D-4379-89DF-43318BBE1A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4519B6B4-CB3D-4379-89DF-43318BBE1A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DB4C51C-1EA2-4EE5-8746-6B4521F78E36}
+	EndGlobalSection
+EndGlobal
