@@ -12,7 +12,7 @@ using PiDataEmailApp.DataAccess.Concrete;
 namespace PiDataEmailApp.DataAccess.Migrations
 {
     [DbContext(typeof(PiDataDbContext))]
-    [Migration("20240317142752_initial")]
+    [Migration("20240318185243_initial")]
     partial class initial
     {
         /// <inheritdoc />
@@ -98,9 +98,6 @@ namespace PiDataEmailApp.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("DogumTarihi")
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<string>("Eposta")
                         .IsRequired()
                         .HasColumnType("text");
@@ -124,6 +121,9 @@ namespace PiDataEmailApp.DataAccess.Migrations
 
                     b.Property<string>("Unvan")
                         .HasColumnType("text");
+
+                    b.Property<int>("Yas")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

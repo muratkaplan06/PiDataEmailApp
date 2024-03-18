@@ -7,7 +7,7 @@
         public string Soyad { get; set; }
         public string? Telefon { get; set; }
         public string Eposta { get; set; }
-        public DateTime DogumTarihi { get; set; }
+        public int Yas { get; set; }
         public string EpostaAdresi { get; set; }
         public string Cinsiyet { get; set; }
         public string? Unvan { get; set; }
