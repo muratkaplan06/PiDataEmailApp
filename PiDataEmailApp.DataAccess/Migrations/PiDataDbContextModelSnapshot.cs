@@ -95,9 +95,6 @@ namespace PiDataEmailApp.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("DogumTarihi")
-                        .HasColumnType("timestamp with time zone");
-
                     b.Property<string>("Eposta")
                         .IsRequired()
                         .HasColumnType("text");
@@ -121,6 +118,9 @@ namespace PiDataEmailApp.DataAccess.Migrations
 
                     b.Property<string>("Unvan")
                         .HasColumnType("text");
+
+                    b.Property<int>("Yas")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 

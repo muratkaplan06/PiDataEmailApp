@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
@@ -54,7 +53,7 @@ namespace PiDataEmailApp.DataAccess.Migrations
                     Soyad = table.Column<string>(type: "text", nullable: false),
                     Telefon = table.Column<string>(type: "text", nullable: true),
                     Eposta = table.Column<string>(type: "text", nullable: false),
-                    DogumTarihi = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Yas = table.Column<int>(type: "integer", nullable: false),
                     EpostaAdresi = table.Column<string>(type: "text", nullable: false),
                     Cinsiyet = table.Column<string>(type: "text", nullable: false),
                     Unvan = table.Column<string>(type: "text", nullable: true),

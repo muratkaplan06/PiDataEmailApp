@@ -25,6 +25,14 @@ public class KisiManager: IKisiService
         return await ResponseModel<List<KisiModel>>.SuccessAsync(result,200);
     }
 
+    public async Task<ResponseModel<List<KisiModel>>> GetAllByFilter(string? cinsiyet, int? yasMin, int? yasMax)
+    {
+        var response = await _kisiDal.GetAllByFilter(cinsiyet, yasMin, yasMax);
+        var result = _mapper.Map<List<KisiModel>>(response);
+        return await ResponseModel<List<KisiModel>>.SuccessAsync(result, 200);
+        
+    }
+
     public ResponseModel<KisiModel> GetById(int id)
     {
         var response = _kisiDal.GetById(id);

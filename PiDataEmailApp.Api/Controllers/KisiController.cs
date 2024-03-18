@@ -21,7 +21,13 @@ namespace PiDataEmailApp.Api.Controllers
             var response = await _kisiService.GetAll();
             return new ObjectResult(response.Data) { StatusCode = response.StatusCode };
         }
-        
+        [HttpGet]
+        public async Task<IActionResult> KisilerwithFilter(string? cinsiyet, int? yasMin, int? yasMax)
+        {
+            var response = await _kisiService.GetAllByFilter(cinsiyet, yasMin, yasMax);
+            return new ObjectResult(response.Data) { StatusCode = response.StatusCode };
+        }
+
         [HttpGet("{id}")]
         public IActionResult Kisi(int id)
         {
