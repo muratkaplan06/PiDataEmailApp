@@ -57,23 +57,12 @@ namespace PiDataEmailApp.DataAccess.Migrations
                     EpostaAdresi = table.Column<string>(type: "text", nullable: false),
                     Cinsiyet = table.Column<string>(type: "text", nullable: false),
                     Unvan = table.Column<string>(type: "text", nullable: true),
-                    Isyeri = table.Column<string>(type: "text", nullable: true),
-                    EpostaGonderimId = table.Column<int>(type: "integer", nullable: true)
+                    Isyeri = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Kisiler", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Kisiler_EpostaGonderimleri_EpostaGonderimId",
-                        column: x => x.EpostaGonderimId,
-                        principalTable: "EpostaGonderimleri",
-                        principalColumn: "Id");
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Kisiler_EpostaGonderimId",
-                table: "Kisiler",
-                column: "EpostaGonderimId");
         }
 
         /// <inheritdoc />
@@ -83,10 +72,10 @@ namespace PiDataEmailApp.DataAccess.Migrations
                 name: "EpostaAdresleri");
 
             migrationBuilder.DropTable(
-                name: "Kisiler");
+                name: "EpostaGonderimleri");
 
             migrationBuilder.DropTable(
-                name: "EpostaGonderimleri");
+                name: "Kisiler");
         }
     }
 }
