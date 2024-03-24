@@ -29,9 +29,13 @@ namespace PiDataEmailApp.Api.Controllers
             return new ObjectResult(response.Data) { StatusCode = response.StatusCode };
         }
         [HttpPost]
-        public IActionResult EpostaAdresiGonderimEkle([FromBody] EpostaGonderimModel model)
+        public async Task<IActionResult> Gonder([FromBody] EpostaGonderimModel model)
         {
-            var response = _epostaGonderimService.Create(model);
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            var response = await _epostaGonderimService.Create(model);
             return new ObjectResult(response.Data) { StatusCode = response.StatusCode };
         }
         [HttpPost]

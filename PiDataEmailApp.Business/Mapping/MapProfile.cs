@@ -11,6 +11,7 @@ public class MapProfile:Profile
         CreateMap<EpostaGonderim, EpostaGonderimModel>().ReverseMap();
         CreateMap<EpostaAdresi, EpostaAdresiModel>().ReverseMap();
         CreateMap<Kisi, KisiModel>().ReverseMap();
+        CreateMap<EpostaGonderimDetay, EpostaGonderimDetayModel>().ReverseMap();
     }
     
 }

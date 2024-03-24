@@ -18,18 +18,16 @@ public class KisiManager: IKisiService
         _mapper = mapper;
     }
     
-    public async Task<ResponseModel<List<KisiModel>>> GetAll()
+    public async Task<ResponseModel<List<Kisi>>> GetAll()
     {
         var response=await _kisiDal.GetAll();
-        var result=_mapper.Map<List<KisiModel>>(response);
-        return await ResponseModel<List<KisiModel>>.SuccessAsync(result,200);
+        return await ResponseModel<List<Kisi>>.SuccessAsync(response,200);
     }
 
-    public async Task<ResponseModel<List<KisiModel>>> GetAllByFilter(string? cinsiyet, int? yasMin, int? yasMax)
+    public async Task<ResponseModel<List<Kisi>>> GetAllByFilter(string? cinsiyet, int? yasMin, int? yasMax)
     {
         var response = await _kisiDal.GetAllByFilter(cinsiyet, yasMin, yasMax);
-        var result = _mapper.Map<List<KisiModel>>(response);
-        return await ResponseModel<List<KisiModel>>.SuccessAsync(result, 200);
+        return await ResponseModel<List<Kisi>>.SuccessAsync(response, 200);
         
     }
 

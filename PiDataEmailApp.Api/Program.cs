@@ -31,6 +31,7 @@ builder.Services.AddScoped<IEpostaGonderimDal, EpostaGonderimDal>();
 builder.Services.AddScoped<IKisiService, KisiManager>();
 builder.Services.AddScoped<IEpostaAdresiService, EpostaAdresiManager>();
 builder.Services.AddScoped<IEpostaGonderimService, EpostaGonderimManager>();
+builder.Services.AddScoped<IEpostaGonderimDetayDal, EpostaGonderimDetayDal>();
 
 var app = builder.Build();
 

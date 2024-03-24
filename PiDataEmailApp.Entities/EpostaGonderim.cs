@@ -2,8 +2,10 @@
 
 public class EpostaGonderim
 {
-    public int Id { get; set; }
+    public Guid Id { get; set; }
     public string Konusu { get; set; }
     public string Icerigi { get; set; }
     public string GonderenEpostaAdresi { get; set; }
+    public int EpostaAdresiId { get; set; }
+    public EpostaAdresi EpostaAdresi { get; set; }
 }

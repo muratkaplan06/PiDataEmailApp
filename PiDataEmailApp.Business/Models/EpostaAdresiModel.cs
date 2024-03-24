@@ -4,6 +4,7 @@ namespace PiDataEmailApp.Business.Models;
 
 public class EpostaAdresiModel
 {
+    public int Id { get; set; }
     [Required(ErrorMessage = "Adres alanı boş geçilemez")]
     [StringLength(100, ErrorMessage = "Adres alanı en fazla 100 karakter olmalıdır")]
     [EmailAddress(ErrorMessage = "Geçersiz mail adresi")]

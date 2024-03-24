@@ -8,5 +8,6 @@
         public string KullaniciAdi { get; set; }
         public string Sifre { get; set; }
         public int Port { get; set; }
+        public IList<EpostaGonderim> EpostaGonderimler { get; set; }
     }
 }

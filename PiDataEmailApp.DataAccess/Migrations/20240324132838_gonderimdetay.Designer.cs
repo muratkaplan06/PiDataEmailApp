@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using PiDataEmailApp.DataAccess.Concrete;
@@ -11,9 +12,11 @@ using PiDataEmailApp.DataAccess.Concrete;
 namespace PiDataEmailApp.DataAccess.Migrations
 {
     [DbContext(typeof(PiDataDbContext))]
-    partial class PiDataDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240324132838_gonderimdetay")]
+    partial class gonderimdetay
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

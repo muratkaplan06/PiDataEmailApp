@@ -36,8 +36,18 @@ public class EfEntityRepository<T, TContext> : IEntityRepository<T>
 
     public async Task Add(T entity)
     {
-        _context.Entry(entity).State = EntityState.Added;
-        await _context.SaveChangesAsync();
+        try
+        {
+            _context.Entry(entity).State = EntityState.Added;
+            await _context.SaveChangesAsync();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+        //_context.Entry(entity).State = EntityState.Added;
+        //await _context.SaveChangesAsync();
     }
 
     public void AddList(List<T> entityList)
