@@ -32,22 +32,13 @@ public class EfEntityRepository<T, TContext> : IEntityRepository<T>
     public T? GetById(int id)
     {
         return _context.Set<T>().Find(id);
-    } 
+    }
 
     public async Task Add(T entity)
     {
-        try
-        {
-            _context.Entry(entity).State = EntityState.Added;
-            await _context.SaveChangesAsync();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
 
-        //_context.Entry(entity).State = EntityState.Added;
-        //await _context.SaveChangesAsync();
+        _context.Entry(entity).State = EntityState.Added;
+        await _context.SaveChangesAsync();
     }
 
     public void AddList(List<T> entityList)
@@ -76,4 +67,4 @@ public class EfEntityRepository<T, TContext> : IEntityRepository<T>
         await _context.SaveChangesAsync();
     }
 }
-    
+
